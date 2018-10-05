@@ -1,0 +1,93 @@
+    .right-contents{
+      height: 100%;
+      width: calc(100% - 300px);
+      background-color: #AAAAAA;
+      float: right;
+      &__title{
+        height: 15%;
+        width: 100%;
+        background-color: white;
+        border: 1px solid #eeeeee;
+
+        &--group-title{
+          padding: 35px 0 15px 40px;
+          font-size: 20px;
+          color: #333333;
+          float:left;
+        }
+        &--edit{
+          height: 40px;
+          border: 1px solid blue;
+          padding: 10px 20px;
+          float:right;
+          margin: 28px 40px 0 0;
+        }
+        &--group-member{
+          font-size: 12px;
+          color: #999999;
+          padding-left: 40px;
+          float: left;
+          clear: both;
+        }
+      }
+      &__messages{
+      height: 70%;
+      width: 100%;
+      background-color: white;
+        &--member{
+          font-size: 16px bold;
+          color: #434A54;
+          padding: 46px 0 0 40px;
+          float: left;
+        }
+        &--date{
+          font-size: 12px;
+          color: #999999;
+          padding: 50px 0 0 10px;
+          float: left;
+        }
+        &--comments{
+          font-size: 14px;
+          color: #434A54;
+          clear: both;
+          padding-left: 40px;
+        }
+      }
+      &__post{
+        height: 10%;
+        width: 60%;
+        position: fixed;
+        bottom: 0;
+        padding: 20px 0;
+          &--text{
+            height: 80px;
+            width: 100%;
+            margin-left: 40px;
+            background-color: white;
+            .form{
+              height: 76px;
+              width: 900px;
+              font-size: 16px;
+            }
+            .item{
+              color: blue;
+              display: inline-block;
+              margin: 20px;
+              z-index: 1;
+              position: absolute;
+              right: -80px;
+              bottom: 30px;
+            }
+          }
+        &--send{
+          position: absolute;
+          right: -270px;
+          bottom: 25px;
+          height: 40px;
+          border: 1px solid blue;
+          padding: 10px 20px;
+          float:right;
+          margin: 28px 40px 0 0;
+          }
+      }
+    }
