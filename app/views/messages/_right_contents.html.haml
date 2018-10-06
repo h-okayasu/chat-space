@@ -1,0 +1,33 @@
+.right-contents
+  .right-contents__title
+    .right-contents__title--group-title
+      %p eee
+    .right-contents__title--edit
+      %p edit
+    .right-contents__title--group-member
+      %p mmmmm
+  .right-contents__messages
+
+    .right-contents__messages--member
+      %p AAAA
+    .right-contents__messages--date
+      %p sssss
+    .right-contents__messages--comments
+      %p ffff
+
+    .right-contents__messages--member
+      %p vvv
+    .right-contents__messages--date
+      %p !!!!
+    .right-contents__messages--comments
+      %p ????
+
+  .right-contents__post
+    .right-contents__post--text
+      .from
+      %form
+        %input.form{placeholder: 'type a message'}
+          = link_to do
+            = fa_icon 'pencil-square-o', class: 'item'
+    .right-contents__post--send
+      %p SEND
