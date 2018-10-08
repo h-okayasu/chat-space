@@ -42,15 +42,17 @@
           height: 85%;
           width: 100%;
           background-color: #2f3e51;
-          &--name{
-            color: #FFFFFF;
-            padding: 20px 0 0 20px;
-            font-size: 15px;
-          }
-          &--message{
-            color: #FFFFFF;
-            padding: 5px 0 20px 20px;
-            font-size: 11px;
+          .group{
+            &__name{
+              color: #FFFFFF;
+              padding: 20px 0 0 20px;
+              font-size: 15px;
+            }
+            &__message{
+              color: #FFFFFF;
+              padding: 5px 0 20px 20px;
+              font-size: 11px;
+            }
           }
         }
     }
