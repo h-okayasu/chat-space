@@ -1,33 +1,22 @@
 .right-contents
   .right-contents__title
     .right-contents__title--group-title
-      %p eee
+      %p test
     .right-contents__title--edit
       %p edit
     .right-contents__title--group-member
-      %p mmmmm
+      %p member
   .right-contents__messages
+    .messages
+      = render @messages
+      .right-contents__post
+        .right-contents__post--text
+          .from
+            = form_for [@group, @message] do |f|
+              =f.text_field :body, class: 'form__message', placeholder: 'type a message'
+              .form__mask
+                = f.label :image, class: 'from__mask__image' do
 
-    .right-contents__messages--member
-      %p AAAA
-    .right-contents__messages--date
-      %p sssss
-    .right-contents__messages--comments
-      %p ffff
-
-    .right-contents__messages--member
-      %p vvv
-    .right-contents__messages--date
-      %p !!!!
-    .right-contents__messages--comments
-      %p ????
-
-  .right-contents__post
-    .right-contents__post--text
-      .from
-      %form
-        %input.form{placeholder: 'type a message'}
-          = link_to do
-            = fa_icon 'pencil-square-o', class: 'item'
-    .right-contents__post--send
-      %p SEND
+                  = fa_icon 'pencil-square-o', class: 'item'
+                  = f.file_field :image, class: 'hidden'
+                  = f.submit 'SEND', class: 'form__submit'
