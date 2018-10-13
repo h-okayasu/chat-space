@@ -9,6 +9,7 @@
         background-color: white;
         border: 1px solid #eeeeee;
 
+
         &--group-title{
           padding: 35px 0 15px 40px;
           font-size: 20px;
@@ -31,26 +32,32 @@
         }
       }
       &__messages{
-      height: 70%;
-      width: 100%;
-      background-color: white;
-        &--member{
-          font-size: 16px bold;
-          color: #434A54;
-          padding: 46px 0 0 40px;
-          float: left;
-        }
-        &--date{
-          font-size: 12px;
-          color: #999999;
-          padding: 50px 0 0 10px;
-          float: left;
-        }
-        &--comments{
-          font-size: 14px;
-          color: #434A54;
-          clear: both;
-          padding-left: 40px;
+        height: 70%;
+        width: 100%;
+        overflow: auto;
+        .messages{
+        width: 100%;
+        float: right;
+          &__member{
+            font-size: 20px;
+            color: #434A54;
+            padding: 46px 0 0 40px;
+            float: left;
+          }
+          &__date{
+            font-size: 12px;
+            color: #999999;
+            padding: 50px 0 0 10px;
+            float: left;
+          }
+          &__comments{
+            font-size: 14px;
+            color: #434A54;
+            clear: both;
+            padding-left: 40px;
+            &--text{
+            }
+          }
         }
       }
       &__post{
@@ -58,13 +65,13 @@
         width: 60%;
         position: fixed;
         bottom: 0;
-        padding: 20px 0;
+        padding: 15px 0;
           &--text{
             height: 80px;
             width: 100%;
             margin-left: 40px;
             background-color: white;
-            .form{
+            .form__message{
               height: 76px;
               width: 900px;
               font-size: 16px;
@@ -78,8 +85,11 @@
               right: -80px;
               bottom: 30px;
             }
+            .hidden{
+                display:none;
+              }
           }
-        &--send{
+        .form__submit{
           position: absolute;
           right: -270px;
           bottom: 25px;
