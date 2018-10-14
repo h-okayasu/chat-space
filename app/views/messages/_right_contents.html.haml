@@ -16,7 +16,6 @@
               =f.text_field :body, class: 'form__message', placeholder: 'type a message'
               .form__mask
                 = f.label :image, class: 'from__mask__image' do
-
                   = fa_icon 'pencil-square-o', class: 'item'
                   = f.file_field :image, class: 'hidden'
                   = f.submit 'SEND', class: 'form__submit'
