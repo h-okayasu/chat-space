@@ -6,7 +6,7 @@ function buildHTML(message){
                   ${ message.user.name }
                 </div>
                 <div class="messages__date">
-                  ${ message.created_at.strftime("%Y/%m/%d %H:%M") }
+                  ${ message.created_at. }
                 </div>
                 <div class="messages__comments">
                   <p class="messages__comments--text">
@@ -15,7 +15,6 @@ function buildHTML(message){
                   </p>
                 </div>
              `
-             console.log('message')
   return html;
 }
 
@@ -27,7 +26,6 @@ function buildHTML(message){
   // 
     var url = $(this).attr('action');
   // ここでのthisはフォームで入力された内容を指していて、そのアクション属性を指定している。(new_messageのアクションで'groups/1/messages'を指定)
-    console.log("success!");
     for(item of formData){
         console.log(item);
     }
@@ -47,10 +45,8 @@ function buildHTML(message){
     })
     .done(function(data){
   // ここのdataにはcreate.json.jbuilderで変換されたフォームに入力された情報が入っている
-      console.log("success!");
       var html = buildHTML(data);
   // dataの中身をbuildHTMLに渡してhtmlとしての返り値を変数htmlに代入している
-      console.log(data);
       $('.right-contents__messages').append(html);
   // .right-contents__messagesへ上で代入したhtmlをappendメソッドによってhtml要素として追加している
       $('#new_message').val('');
@@ -59,7 +55,8 @@ function buildHTML(message){
     })
   // フォームの送信ボタンを有効にさせている・・らしい
     .fail(function(){
-      console.log("error!");
+      $('#new_message').val('');
+      $('.form__submit').prop('disabled',false);
       alert('error');
   // フォーム投稿のどこかのフローの中で不備があった場合はエラーを告知させる
     });
