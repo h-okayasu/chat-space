@@ -6,7 +6,7 @@ function buildHTML(message){
                   ${ message.user.name }
                 </div>
                 <div class="messages__date">
-                  ${ message.created_at. }
+                  ${ message.created_at }
                 </div>
                 <div class="messages__comments">
                   <p class="messages__comments--text">
@@ -26,9 +26,7 @@ function buildHTML(message){
   // 
     var url = $(this).attr('action');
   // ここでのthisはフォームで入力された内容を指していて、そのアクション属性を指定している。(new_messageのアクションで'groups/1/messages'を指定)
-    for(item of formData){
-        console.log(item);
-    }
+
     $.ajax({
       url: url,
   // 28行目で用意した変数urlを指定する事でリクエストパスを取得
