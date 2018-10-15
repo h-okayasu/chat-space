@@ -12,7 +12,6 @@ before_action :set_group
       respond_to do |format|
         format.html
         format.json
-  # respond_toでは送られてきたデータをhtmlかjsonを判断して、htmlならビューを返す(ここではindex.html.haml)jsonの場合、非同期通信として必要な情報だけを送る(今回では入力されたフォームの情報をcreate.json.jbuilderへ渡す)
       end
       redirect_to group_messages_path(@group), notice: "メッセージを送信しました"
     else
