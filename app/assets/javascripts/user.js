@@ -54,4 +54,3 @@ function membersHTML(name, id){
     $(this).parent().remove();
   });
 });
-
