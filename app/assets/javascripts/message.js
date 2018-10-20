@@ -48,21 +48,18 @@ function buildHTML(message){
      if (window.location.href.match(/\/groups\/\d+\/messages/)) {
       var url = window.location.href
       var id = $('.messages').last().data('message-id');
-      console.log(id);
     $.ajax({
       url: url,
       method: 'GET',
       dataType: 'json'
     })
     .done(function(data) {
-      console.log(data);
       var updateHTML = '';
       data.forEach(function(message){
-        if (message.id > id){
-        updateHTML += buildHTML(message);
-        }
+      if (message.id > id){
+      updateHTML += buildHTML(message);
+      }
       });
-      console.log(updateHTML);
       $('.right-contents__messages').append(updateHTML);
     })
     .fail(function(data) {
