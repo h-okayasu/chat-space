@@ -56,9 +56,9 @@ function buildHTML(message){
     .done(function(data) {
       var updateHTML = '';
       data.forEach(function(message){
-      if (message.id > id){
-      updateHTML += buildHTML(message);
-      }
+        if (message.id > id){
+        updateHTML += buildHTML(message);
+        }
       });
       $('.right-contents__messages').append(updateHTML);
     })
