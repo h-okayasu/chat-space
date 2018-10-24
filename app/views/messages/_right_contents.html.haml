@@ -3,7 +3,8 @@
     .right-contents__title--group-title
       = @group.name
     .right-contents__title--edit
-      %p edit
+      = link_to edit_group_path(@group) do
+        %p edit
     .right-contents__title--group-member
       %p member
   .right-contents__messages
