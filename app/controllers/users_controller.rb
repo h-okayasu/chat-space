@@ -24,8 +24,3 @@ private
     params.require(:user).permit(:name, :email)
   end
 end
-
-
-
-# hoge
-# hoge2
