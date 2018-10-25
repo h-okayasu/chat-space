@@ -1,7 +1,7 @@
     .right-contents{
       height: 100%;
       width: calc(100% - 300px);
-      background-color: #AAAAAA;
+      // background-color: #AAAAAA;
       float: right;
       &__title{
         height: 15%;
@@ -17,11 +17,15 @@
           float:left;
         }
         &--edit{
-          height: 40px;
+          height: 30px;
           border: 1px solid blue;
+          background-color: blue;
           padding: 10px 20px;
           float:right;
-          margin: 28px 40px 0 0;
+          margin: 28px 50px 0 0;
+          p{
+            color: white;
+          }
         }
         &--group-member{
           font-size: 12px;
@@ -62,13 +66,14 @@
       }
       &__post{
         height: 10%;
-        width: 60%;
+        width: 100%;
         position: fixed;
         bottom: 0;
         padding: 15px 0;
+        background-color: #AAAAAA;
           &--text{
             height: 80px;
-            width: 100%;
+            width: 60%;
             margin-left: 40px;
             background-color: white;
             .form__message{
@@ -82,8 +87,8 @@
               margin: 20px;
               z-index: 1;
               position: absolute;
-              right: -80px;
-              bottom: 30px;
+              left: 60%;
+              bottom: 25px;
             }
             .hidden{
                 display:none;
@@ -91,10 +96,13 @@
           }
         .form__submit{
           position: absolute;
-          right: -270px;
-          bottom: 25px;
-          height: 40px;
+          left: 68%;
+          bottom: 15px;
+          height: 78px;
+          width: 100px;
           border: 1px solid blue;
+          background-color: blue;
+          color: white;
           padding: 10px 20px;
           float:right;
           margin: 28px 40px 0 0;

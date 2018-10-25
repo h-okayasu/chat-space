@@ -47,7 +47,7 @@ function membersHTML(name, id){
     var name = $(this).data('user-name');
     var id = $(this).data('user-id');
     var html = membersHTML(name, id);
-    $('#user-search-result').append(html);
+    $('.chat-group-user__name--member').append(html);
     $(this).parent().remove();
   });
   $('#user-search-result').on('click', ".user-search-remove", function(){

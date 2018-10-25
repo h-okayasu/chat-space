@@ -6,7 +6,8 @@
       = link_to edit_group_path(@group) do
         %p edit
     .right-contents__title--group-member
-      %p member
+      -@group.users.each do |user|
+        =user.name + ""
   .right-contents__messages
     .messages
       = render @messages
