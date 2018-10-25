@@ -1,16 +1,19 @@
 $(document).on('turbolinks:load', function(){
 function buildHTML(message){
   var image = message.image ? `<img src = "${ message.image }"}>` :""
+  var body = message.body ? `${ message.body } `:""
+  var name = message.name ? `${ message.name }`:""
+  var date = message.name ? `${ message.date }`:""
   var html = `<div class="messages" data-message-id="${ message.id }">
                 <div class="messages__member">
-                  ${ message.name }
+                  ${ name }
                 </div>
                 <div class="messages__date">
-                  ${ message.date }
+                  ${ date }
                 </div>
                 <div class="messages__comments">
                   <p class="messages__comments--text">
-                    ${ message.body }
+                    ${ body }
                   </p>
                   <div class= "message__comments">
                    <div class="comments__image">
@@ -36,7 +39,8 @@ function buildHTML(message){
     .done(function(data){
       var html = buildHTML(data);
       $('.right-contents__messages').append(html);
-      $('#new_message').val('');
+      $('.form__message').val('');
+      $('.hidden').val('');
       $('.form__submit').prop('disabled', false);
     })
     .fail(function(){
